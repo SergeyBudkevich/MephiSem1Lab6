@@ -29,7 +29,7 @@ void comb_sort(void* base, size_t nmemb, size_t size, int (*cmp)(const void*, co
             }
         }
     }
-}
+}   
 
 void heap_sort(void* base, size_t nmemb, size_t size, int (*cmp)(const void*, const void*)) {
     if (nmemb < 2) {

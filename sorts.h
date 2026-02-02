@@ -33,4 +33,4 @@ int CompAge2 (const void* a, const void* b);
 void comb_sort(void*, size_t, size_t, int (*)(const void *, const void *));
 void heap_sort(void*, size_t, size_t, int (*)(const void*, const void*));
 
-void print_all(Voiter **a, int m, int n);
+void print_arr(Voiter **a, int m, int n);

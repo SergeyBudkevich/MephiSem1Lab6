@@ -68,7 +68,7 @@ int main(int argc, char **argv) {
         }
     }
 
-    //СОРТИРОВКА
+    //ВЫБОР АЛГОРИТМА, ПОЛЯ И НАПРАВЛЕНИЯ СОРТИРОВКИ
     sort sort = NULL;
     cmp cmp = NULL;
 
@@ -108,11 +108,11 @@ int main(int argc, char **argv) {
             break;
     }
 
-    printf("До сортировки:\n");
-    print_all(array_m, m, n);    
+    //printf("До сортировки:\n"); print_arr(array_m, m, n);    
 
     clock_t start = clock();
 
+    //СОРТИРОВКА
     for (int k = 0; k < m; k++) {
         sort(array_m[k], (size_t)n, sizeof(Voiter), cmp);
     }
@@ -120,8 +120,7 @@ int main(int argc, char **argv) {
     clock_t end = clock();
     double time = (double)(end - start) / CLOCKS_PER_SEC;
 
-    printf("После сортировки:\n");
-    print_all(array_m, m, n);
+    //printf("После сортировки:\n"); print_arr(array_m, m, n);
 
     printf("Время - %f, Кол-во элементов - %d", time, n);
 
@@ -199,7 +198,8 @@ int option(int c, const char* optarg, int* alg, int* field, int* orin, int* n, i
     }
 }
 
-void print_all(Voiter** array, int m, int n) {
+/*
+void print_arr(Voiter** array, int m, int n) {
     for (int k = 0; k < m; k++) {
         printf("Массив %d:\n", k);
         for (int i = 0; i < n; i++) {
@@ -208,5 +208,5 @@ void print_all(Voiter** array, int m, int n) {
         printf("\n");
     }
 }
-
+*/
 
